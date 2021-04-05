@@ -557,7 +557,7 @@ public class ThreadIt extends java.lang.Thread
   /**
    * Method ThreadItInit performs the shared initialisation code for the
    * class.
-   * @param theLogName
+   * @param theThreadName
    */
   private void threadItInit (String theThreadName)
   {
@@ -1206,7 +1206,7 @@ public class ThreadIt extends java.lang.Thread
    * THREADIT_STATUS_OK - parameters check out ok.
    * THREADIT_STATUS_PARAM_OBJECT_NULL - the expected object parameter is NULL.
    * THREADIT_STATUS_PARAM_WORK_PACK_NULL - the input work packet is NULL.
-   * @param isCopy[in] indicates if the input ptheWorkPack should be copied to the output ptheWorkDone.
+   * @param isCopy indicates if the input ptheWorkPack should be copied to the output ptheWorkDone.
    * \return true true if the check on the parameters is successful.
    * If the check fails then the ptheWorkDone is always returned as a new CWorkPackIt. If ptheWorkPack is not NULL and
    * isCopy is specified then ptheWorkDone will be a copy of ptheWorkPack. The ptheObj is returned as NULL on failure.
@@ -1268,7 +1268,7 @@ public class ThreadIt extends java.lang.Thread
    * @param[out] theStatus returns the status of the parameter check. It has a value of
    * THREADIT_STATUS_OK - parameters check out ok.
    * THREADIT_STATUS_PARAM_WORK_PACK_NULL - the input work packet is NULL.
-   * @param isCopy[in] indicates if the input ptheWorkPack should be copied to the output ptheWorkDone.
+   * @param isCopy indicates if the input ptheWorkPack should be copied to the output ptheWorkDone.
    * \return true true if the check on the parameters is successful.
    * If the check fails then the ptheWorkDone is always returned as a new CWorkPackIt. If ptheWorkPack is not NULL and
    * isCopy is specified then ptheWorkDone will be a copy of ptheWorkPack.
