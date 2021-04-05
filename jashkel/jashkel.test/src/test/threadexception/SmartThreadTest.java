@@ -1,0 +1,73 @@
+/*-------------------------------------------------------------------------*/
+/* Copyright (C) 2011 by Ashkel Software                                   */
+/* ari@ashkel.com.au                                                       */
+/*                                                                         */
+/* This file is part of the threadit library.                              */
+/*                                                                         */
+/* The threadit library is free software; you can redistribute it and/or   */
+/* modify it under the terms of The Code Project Open License (CPOL) 1.02  */
+/*                                                                         */
+/* The threadit library is distributed in the hope that it will be useful, */
+/* but WITHOUT ANY WARRANTY; without even the implied warranty of          */
+/* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the CPOL       */
+/* License for more details.                                               */
+/*                                                                         */
+/* You should have received a copy of the CPOL License along with this     */
+/* software.                                                               */
+/*-------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------*/
+/* Package declaration.                                                     */
+/*--------------------------------------------------------------------------*/
+package test.threadexception;
+
+import javax.swing.UIManager;
+import java.awt.*;
+
+/**
+ * Title:        Threads and Exceptions
+ * Description:  This project explores a mechanism for capturing exceptions that
+ * are generated within a thread and managing them.
+ * Copyright:    Copyright (c) 2001
+ * Company:      Ashkel Software
+ * @author Ari Edinburg
+ * @version 1.0
+ */
+
+public class SmartThreadTest {
+  boolean packFrame = false;
+
+  /**Construct the application*/
+  public SmartThreadTest() {
+    SmartThreadTestFrame frame = new SmartThreadTestFrame();
+    //Validate frames that have preset sizes
+    //Pack frames that have useful preferred size info, e.g. from their layout
+    if (packFrame) {
+      frame.pack();
+    }
+    else {
+      frame.validate();
+    }
+    //Center the window
+    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+    Dimension frameSize = frame.getSize();
+    if (frameSize.height > screenSize.height) {
+      frameSize.height = screenSize.height;
+    }
+    if (frameSize.width > screenSize.width) {
+      frameSize.width = screenSize.width;
+    }
+    frame.setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 2);
+    frame.setVisible(true);
+  }
+  /**Main method*/
+  public static void main(String[] args) {
+    try {
+      UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+    }
+    catch(Exception e) {
+      e.printStackTrace();
+    }
+    new SmartThreadTest();
+  }
+}

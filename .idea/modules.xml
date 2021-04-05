@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jashkel/jashkel/jashkel.iml" filepath="$PROJECT_DIR$/jashkel/jashkel/jashkel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jashkel/jashkel.test/jashkel.test.iml" filepath="$PROJECT_DIR$/jashkel/jashkel.test/jashkel.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/threadit-java.iml" filepath="$PROJECT_DIR$/.idea/threadit-java.iml" />
+    </modules>
+  </component>
+</project>
