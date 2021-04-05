@@ -1,17 +1,16 @@
 # threadit-java
-A java library to support the active object concept.
+<h1 style="font-size:130%;"> A java library to support the active object concept. </h1>
 
 Class ThreadIt supports the asynchronous model of an active object that can accept request to do work within a thread of control and return the
 result of the work processing. Work requests are accepted and stored in a buffer until the thread is able to perform the work associated with
 the request. Completed work requests (the result of the work) are buffered until the requestor is able to retrieve the result. 
 The model requires the following classes:
-WorkPackIt    - This class describes the work to be performed.
-WorkPackIt    - This class describes the results of the work.
-ThreadIt      - Implements the model that defines how clients are
-                able to execute work in separate thread.
-Derived Class - Defines the processing to perform in response to work
-                requests.
-                
+<p>
+WorkPackIt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &nbsp; This class describes the work to be performed.<br>
+WorkPackIt &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- &nbsp; This class describes the results of the work.<br>
+ThreadIt &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;- &nbsp; Implements the model that defines how clients are able to execute work in separate thread. <br>
+Derived Class &nbsp;- &nbsp; Defines the processing to perform in response to work requests.<br>
+</p>                
 The class derived from ThreadIt creates work packages using WorkPackIt. 
 These work packages are associated with a given method that the class implements. When the ThreadIt class gets the work package it will invoke
 the method in it's own thread of control. The method implementation takes the input values from the work packages and peforms the necessary
